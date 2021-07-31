@@ -1,0 +1,33 @@
+{
+  "id": "SampleRealm",
+  "realm": "SampleRealm",
+  "enabled": true,
+  "defaultSignatureAlgorithm": "RS256",
+  "loginWithEmailAllowed": true,
+  "clients": [
+    {
+      "clientId": "test-client",
+      "enabled": true,
+      "standardFlowEnabled": false,
+      "implicitFlowEnabled": false,
+      "directAccessGrantsEnabled": false,
+      "serviceAccountsEnabled": false,
+      "bearerOnly": false,
+      "publicClient": false,
+      "clientAuthenticatorType": "client-secret",
+      "secret": "2ae6d81d-bc78-434e-a7b8-985921e0d47b",
+      "protocol": "openid-connect",
+      "attributes": {
+        "oidc.ciba.grant.enabled": "true"
+      },
+      "defaultClientScopes": [],
+      "optionalClientScopes": ["openid"]
+    }
+  ],
+  "clientScopes": [
+    {
+      "name": "openid",
+      "protocol": "openid-connect"
+    }
+  ]
+}

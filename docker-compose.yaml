@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  keycloak:
+    container_name: keycloak
+    image: jboss/keycloak:14.0.0
+    command: -b 0.0.0.0 -Dkeycloak.profile.feature.ciba=enabled
+    ports:
+      - "8088:8080"
+    volumes:
+      - ./docker/keycloak/realm.json:/tmp/realm.json
+      - ./docker/keycloak/standalone-ha.xml:/opt/jboss/keycloak/standalone/configuration/standalone-ha.xml
+    environment:
+      KEYCLOAK_USER: admin
+      KEYCLOAK_PASSWORD: password
+      KEYCLOAK_IMPORT: /tmp/realm.json
+  
+  authn-server:
+    container_name: authn-server
+    build: docker/auth-server
+    ports:
+      - "3000:8000"
