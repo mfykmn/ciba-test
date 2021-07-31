@@ -17,6 +17,6 @@ services:
   
   authn-server:
     container_name: authn-server
-    build: docker/auth-server
+    image: kennethreitz/httpbin
     ports:
-      - "3000:8000"
+      - "3000:80"

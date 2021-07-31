@@ -560,7 +560,7 @@
                 <default-provider>ciba-http-auth-channel</default-provider>
                 <provider name="ciba-http-auth-channel" enabled="true">
                     <properties>
-                        <property name="httpAuthenticationChannelUri" value="http://authn-server:8000/status/201"/>
+                        <property name="httpAuthenticationChannelUri" value="http://authn-server:80/status/201"/>
                     </properties>
                 </provider>
             </spi>
