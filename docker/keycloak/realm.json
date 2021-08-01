@@ -4,6 +4,8 @@
   "enabled": true,
   "defaultSignatureAlgorithm": "RS256",
   "loginWithEmailAllowed": true,
+  "oauth2DeviceCodeLifespan": 600,
+  "oauth2DevicePollingInterval": 5,
   "clients": [
     {
       "clientId": "test-client",
