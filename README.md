@@ -1,4 +1,4 @@
-# Keycloak CIBA Test
+# Keycloak CIBA Sample
 
 ## 環境構築
 ```bash
